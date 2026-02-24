@@ -1,4 +1,5 @@
 import 'package:bashar_flutter_dev_portfolio/core/routeConfig/routers.dart';
+import 'package:bashar_flutter_dev_portfolio/core/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -11,6 +12,7 @@ class MyApp extends ConsumerWidget {
     return MaterialApp.router(
       title: 'HB Flutter Dev Portfolio',
       debugShowCheckedModeBanner: false,
+      theme: AppTheme.darkTheme,
       routerConfig: router,
     );
   }
