@@ -34,7 +34,7 @@ class _CommandButtonState extends State<CommandButton> {
               ),
             // optional: subtle always-on shadow
             BoxShadow(
-              color: Colors.black.withOpacity(0.08),
+              color: AppColors.background.withAlpha(200),
               blurRadius: 6,
               offset: const Offset(0, 2),
             ),
