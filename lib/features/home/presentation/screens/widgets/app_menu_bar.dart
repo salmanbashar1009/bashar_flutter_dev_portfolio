@@ -1,6 +1,7 @@
 import 'package:bashar_flutter_dev_portfolio/core/constants/app_colors.dart';
 import 'package:bashar_flutter_dev_portfolio/core/constants/app_string.dart';
 import 'package:bashar_flutter_dev_portfolio/core/utils/utils.dart';
+import 'package:bashar_flutter_dev_portfolio/features/home/presentation/screens/widgets/command_button.dart';
 import 'package:bashar_flutter_dev_portfolio/features/home/presentation/screens/widgets/gradient_border_container.dart';
 import 'package:flutter/material.dart';
 
@@ -21,11 +22,16 @@ class _AppMenuBarState extends State<AppMenuBar> {
     return Align(
       alignment: Alignment.topCenter,
       child: Container(
+        alignment: Alignment.center,
         margin: const EdgeInsets.only(top: 24),
-        padding: const EdgeInsets.all(16),
-        constraints: const BoxConstraints(maxWidth: 1140, maxHeight: 62),
+        padding: const EdgeInsets.symmetric(horizontal: 16),
+        constraints: const BoxConstraints(
+          maxWidth: 1140,
+          maxHeight: 65,
+          minHeight: 60,
+        ),
         decoration: BoxDecoration(
-          border: Utils.appBorder(),
+          border: Utils.appBorder(width: 1),
           borderRadius: BorderRadius.circular(99),
         ),
         child: Row(
@@ -66,6 +72,7 @@ class _AppMenuBarState extends State<AppMenuBar> {
               }),
             ),
             Spacer(),
+            CommandButton(),
           ],
         ),
       ),
